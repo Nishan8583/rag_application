@@ -70,11 +70,11 @@ def load_module():
     print("custom chain created")
     return qa
 
-def main():
-    llm = load_module()
-    print(llm({'query':"what is malware analysis?"}))
-    print(llm({'query':"How to treat tounge infection disease?"}))
+#def main():
+#    llm = load_module()
+#    print(llm({'query':"what is malware analysis?"}))
+#    print(llm({'query':"How to treat tounge infection disease?"}))
     #print(llm({'query':"Why are stars so bright?"}))
    #create_vector_db()
 
-main()
+#main()
