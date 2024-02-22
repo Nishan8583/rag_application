@@ -35,6 +35,7 @@ Helpful answer:
 """
     prompt=PromptTemplate(template=custom_prompt_template,
                           input_variables=['context','question'])
+    print(prompt)
     return prompt
 
 def create_qa_chain(llm,prompt,db):
@@ -44,6 +45,7 @@ def create_qa_chain(llm,prompt,db):
                                        return_source_documents=True,
                                        chain_type_kwargs={'prompt': prompt}
                                        )
+    print(qa_chain)
     return qa_chain
 
 def load_module():
