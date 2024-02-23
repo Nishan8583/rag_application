@@ -4,7 +4,7 @@ from llm_loader import load_module
 app = Flask(__name__)
 
 
-llm = load_module()
+llm = load_module("./models/llama-2-7b-chat.ggmlv3.q8_0.bin")
 @app.route('/query',methods=['POST'])
 def respond_with_llm():
     print("handling requests")

@@ -48,12 +48,12 @@ def create_qa_chain(llm,prompt,db):
     print(qa_chain)
     return qa_chain
 
-def load_module():
+def load_module(model_path):
 
     # loading the metas llama LLM
     print("Loading LLM")
     llm = CTransformers(
-        model="llama-2-7b-chat.ggmlv3.q8_0.bin",
+        model=model_path,
         model_type="llama",
         max_new_token=512,
         temperature=0.5,

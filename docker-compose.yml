@@ -1,0 +1,7 @@
+services:
+  rag_app:
+    image: rag_app
+    ports:
+      - 127.0.0.1:8000:8000
+    volumes:
+      - ./models/:/app/models
