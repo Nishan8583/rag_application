@@ -27,6 +27,6 @@ def respond_with_llm():
     return jsonify(llm_response)
 
 def run_server():
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port="8080")
 
 run_server()

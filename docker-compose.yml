@@ -1,7 +1,11 @@
 services:
   rag_app:
-    image: rag_app
+    image: nishan8583/rag_app
     ports:
-      - 127.0.0.1:8000:8000
+      - target: 8080
+        published: 8080
+        protocol: tcp
+        mode: host
     volumes:
       - ./models/:/app/models
+      - ./vectorstore:/app/vectorstore  
